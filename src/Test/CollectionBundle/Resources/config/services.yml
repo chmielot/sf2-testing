@@ -1,0 +1,7 @@
+parameters:
+#    test_collection.example.class: Test\CollectionBundle\Example
+
+services:
+#    test_collection.example:
+#        class: %test_collection.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

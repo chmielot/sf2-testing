@@ -1,0 +1,25 @@
+
+<form novalidate action="{{ path('test_collection_testcollection') }}" method="post" {{ form_enctype(form) }}>
+
+{% for entry in form.ratings %}
+    {% set index = entry.category.vars.value %}
+    <div class="row">
+        <div class="col-md-3">
+            {{ categories[index] }}
+        </div>
+        <div class="col-md-5">
+            {% for ratingRadio in entry.rating %}
+                <label class="radio-inline">
+                    {{ form_widget(ratingRadio) }} {{ ratingRadio.vars.label }}
+                </label>
+            {% endfor %}
+
+            {{ form_widget(entry.category) }}
+        </div>
+    </div>
+
+{% endfor %}
+{{ form_widget(form._token) }}
+
+<input type="submit" value="send" class="" />
+</form>

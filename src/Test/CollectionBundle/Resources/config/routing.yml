@@ -1,0 +1,7 @@
+test_collection_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: TestCollectionBundle:Default:index }
+
+test_collection_testcollection:
+    pattern:  /testcollection
+    defaults: { _controller: TestCollectionBundle:Default:testCollection }

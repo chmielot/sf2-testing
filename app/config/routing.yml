@@ -1,0 +1,4 @@
+test_collection:
+    resource: "@TestCollectionBundle/Resources/config/routing.yml"
+    prefix:   /
+
